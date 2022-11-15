@@ -8,9 +8,9 @@
 <body>
     <header id="header">My camera Interface mock-up</header>
     <div id="video">
-        <video id="videoScreen" autoplay>
-            
-        </video>
+        <canvas id="canvas" width="415" height="311"><video id="videoScreen" width="415" height="311" autoplay></video></canvas>
+        <img id="imgResult" style="display:none;" width="415" height="311">
+
     </div>
     <div id="informations">
         <div id="Latitude">
@@ -25,7 +25,7 @@
 
     </div>
     <div id="boutons">
-        <button id="saveButton">Save</button>
+        <br><a  id="saveButton" href="#"><button>Save</button></a>
         <button id="shootButton">Shoot</button>
         <button id="resetButton">Reset</button>
     </div>
