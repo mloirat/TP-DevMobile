@@ -1,0 +1,100 @@
+#header{
+    color: black;
+    text-align: center;
+    padding: 12px;
+    font-size: 25px;
+    line-height: 25px;
+    font-family: Arial, sans-serif;
+}
+
+#video{
+    background-color: rgb(167, 209, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#videoScreen{
+    border: 1px solid;
+}
+#informations{
+    background-color: gray;
+}
+#Latitude{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+#Longitude{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+#DateTime{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+#boutons{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+#saveButton{
+    background-color: blue;
+}
+#saveButton{
+    background-color: rgb(7, 216, 227);
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border: 1px solid;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+}
+#saveButton:hover {
+    opacity: 0.8;
+}
+#saveButton:active {
+    background-color: rgb(6, 180, 189);
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
+#shootButton{
+    background-color: rgb(7, 216, 227);
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border: 1px solid;
+    cursor: pointer;
+    margin-inline: 5% ;
+    width: 80px;
+    height: 40px;
+
+}
+#shootButton:hover {
+    opacity: 0.8;
+}
+#shootButton:active {
+    background-color: rgb(6, 180, 189);
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
+#resetButton{
+    background-color: rgb(7, 216, 227);
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border: 1px solid;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+}
+#resetButton:hover {
+    opacity: 0.8;
+}
+#resetButton:active {
+    background-color: rgb(6, 180, 189);
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
