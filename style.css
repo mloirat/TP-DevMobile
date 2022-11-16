@@ -1,14 +1,14 @@
 #body{
     justify-content: center;
     align-items: center;
+    font-family: cursive, sans-serif;
 }
 #header{
     color: black;
     text-align: center;
-    padding: 12px;
+    padding: 30px;
     font-size: 25px;
     line-height: 25px;
-    font-family: Arial, sans-serif;
 }
 
 #canvas {
@@ -25,11 +25,17 @@
     border: 1px solid;
     width: 415px;
     height: 311px;
+    display: none;
 }
 #imgResult{
     display: none;
     width: 415px;
     height: 311px;
+}
+#texte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #informations{
     display: none;
@@ -40,19 +46,19 @@
     padding-bottom: 15px;
 }
 #Latitude{
-    font-family: Arial, sans-serif;
+
     font-size: 15px;
     padding: 5px;
     display: block;
 }
 #Longitude{
-    font-family: Arial, sans-serif;
+
     font-size: 15px;
     padding: 5px;
     display: block;
 }
 #DateTime{
-    font-family: Arial, sans-serif;
+
     font-size: 15px;
     padding: 5px;
     display: block;
@@ -69,7 +75,7 @@
 #saveButtonButton{
     background-color: rgb(7, 216, 227);
     border-radius: 7px;
-    font-family: Arial, sans-serif;
+
     text-align: center;
     border: 1px solid;
     cursor: pointer;
@@ -87,7 +93,7 @@
 #shootButton{
     background-color: rgb(7, 216, 227);
     border-radius: 7px;
-    font-family: Arial, sans-serif;
+
     text-align: center;
     border: 1px solid;
     cursor: pointer;
@@ -107,7 +113,7 @@
 #resetButton{
     background-color: rgb(7, 216, 227);
     border-radius: 7px;
-    font-family: Arial, sans-serif;
+
     text-align: center;
     border: 1px solid;
     cursor: pointer;

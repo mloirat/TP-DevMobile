@@ -66,6 +66,8 @@ function showGeoPositions (position) {
 
 function printData(){
     const informations = document.getElementById("informations");
+    const texte = document.getElementById("texte");
+    texte.setAttribute("style","display: none");
     informations.setAttribute("style","display: grid");
     geolocalize();
     const date = new Date();
@@ -73,11 +75,11 @@ function printData(){
     dateTime.textContent = "Date/Time : "+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
 }
 
-function drawViewfinder(){
+function drawViewfinder(ctx, height, width){
     let c = document.getElementById("canvas");
-    let ctx = c.getContext("2d");
-    let width = ctx.canvas.clientWidth;
-    let height = ctx.canvas.clientHeight;
+    //let ctx = c.getContext("2d");
+    //let width = ctx.canvas.clientWidth;
+    //let height = ctx.canvas.clientHeight;
     let rayon = width/8;
     ctx.strokeStyle = 'red';
     //cercle central
@@ -107,9 +109,11 @@ function main(){
     getStream();
     const video = document.getElementById("videoScreen");
     const canvas2 = document.getElementById("canvas");
-    const ctx = canvas2.getContext("2d");
     //canvas2.width = video.videoWidth;
     //canvas2.height = video.videoHeight;
+    const ctx = canvas2.getContext("2d");
+    const h = canvas2.height;
+    const l = canvas2.width;
     video.addEventListener('loadedmetadata', function() {
         let $this = this; //cache
         (function loop() {
@@ -117,7 +121,7 @@ function main(){
                 ctx.drawImage($this, 0, 0);
                 setTimeout(loop, 1000 / 30);
                 // drawing at 30fps
-                drawViewfinder(ctx);
+                drawViewfinder(ctx, h , l);
             }
         })();
     });
