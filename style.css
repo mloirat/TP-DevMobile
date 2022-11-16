@@ -1,3 +1,7 @@
+#body{
+    justify-content: center;
+    align-items: center;
+}
 #header{
     color: black;
     text-align: center;
@@ -7,29 +11,51 @@
     font-family: Arial, sans-serif;
 }
 
+#canvas {
+    border: 1px solid;
+    width: 415px;
+    height: 311px;
+}
 #video{
-    background-color: rgb(167, 209, 238);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #videoScreen{
     border: 1px solid;
+    width: 415px;
+    height: 311px;
+}
+#imgResult{
+    display: none;
+    width: 415px;
+    height: 311px;
 }
 #informations{
-    background-color: gray;
+    display: none;
+    grid-auto-columns: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
 }
 #Latitude{
     font-family: Arial, sans-serif;
     font-size: 15px;
+    padding: 5px;
+    display: block;
 }
 #Longitude{
     font-family: Arial, sans-serif;
     font-size: 15px;
+    padding: 5px;
+    display: block;
 }
 #DateTime{
     font-family: Arial, sans-serif;
     font-size: 15px;
+    padding: 5px;
+    display: block;
 }
 
 #boutons{
@@ -37,12 +63,10 @@
     background-color: white;
     justify-content: center;
     align-items: center;
+    margin-top: 1%;
+}
 
-}
-#saveButton{
-    background-color: blue;
-}
-#saveButton{
+#saveButtonButton{
     background-color: rgb(7, 216, 227);
     border-radius: 7px;
     font-family: Arial, sans-serif;
@@ -52,10 +76,10 @@
     width: 80px;
     height: 40px;
 }
-#saveButton:hover {
+#saveButtonButton:hover {
     opacity: 0.8;
 }
-#saveButton:active {
+#saveButtonButton:active {
     background-color: rgb(6, 180, 189);
     box-shadow: 0 1px #666;
     transform: translateY(1px);

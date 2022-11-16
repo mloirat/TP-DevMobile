@@ -5,6 +5,7 @@ function hasGetUserMedia() {
 function handleSuccess(stream) {
     const video = document.getElementById("videoScreen");
     video.srcObject = stream;
+
 }
 
 function handleError(error) {
@@ -64,6 +65,8 @@ function showGeoPositions (position) {
 }
 
 function printData(){
+    const informations = document.getElementById("informations");
+    informations.setAttribute("style","display: grid");
     geolocalize();
     const date = new Date();
     const dateTime = document.getElementById("DateTime");
@@ -77,11 +80,10 @@ function drawViewfinder(){
     let height = ctx.canvas.clientHeight;
     let rayon = width/8;
     ctx.strokeStyle = 'red';
-    c.setAttribute('style', 'background-color : rgba(0,0,0,0)');
     //cercle central
     ctx.beginPath();
     ctx.arc(width/2, height/2, rayon, 0, 2 * Math.PI);
-    ctx.stroke()
+    ctx.stroke();
     //trait haut
     ctx.moveTo(width/2 , height/2 - 2*rayon);
     ctx.lineTo(width/2, height/2 - rayon);
@@ -101,13 +103,24 @@ function drawViewfinder(){
 }
 
 
-
-
-
-
 function main(){
     getStream();
-    drawViewfinder();
+    const video = document.getElementById("videoScreen");
+    const canvas2 = document.getElementById("canvas");
+    const ctx = canvas2.getContext("2d");
+    //canvas2.width = video.videoWidth;
+    //canvas2.height = video.videoHeight;
+    video.addEventListener('loadedmetadata', function() {
+        let $this = this; //cache
+        (function loop() {
+            if (!$this.paused && !$this.ended) {
+                ctx.drawImage($this, 0, 0);
+                setTimeout(loop, 1000 / 30);
+                // drawing at 30fps
+                drawViewfinder(ctx);
+            }
+        })();
+    });
     const shootButton = document.getElementById("shootButton");
     shootButton.addEventListener("click", ()=>{
         screenshot();
